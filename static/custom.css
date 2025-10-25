@@ -447,6 +447,7 @@ nav .fa-regular {
   font-size: 0.75em;
   margin-right: 0.4em;
   opacity: 0.55; /* Intentionally lighter */
+  vertical-align: 0.05em; /* Center smaller icons with nav text */
 }
 
 .post-date .fa-regular {
