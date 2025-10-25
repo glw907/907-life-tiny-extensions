@@ -1,0 +1,84 @@
+{{ define "main" }}
+{{/*
+Archive Page Template
+
+This template divides categories into two groups based on the "also" category:
+- "Smartphone-free living": Categories where posts do NOT have "also" tag
+- "Personal": Categories where posts DO have "also" tag
+
+The "also" category itself is excluded from display.
+*/}}
+<div class="archive">
+  <h2 class="p-name">Archive</h2>
+  {{ if templates.Exists "partials/microhook-archive-lead.html" }}
+    {{ partial "microhook-archive-lead.html" . }}
+  {{ end }}
+  {{ $list := ($.Site.GetPage "taxonomyTerm" "categories").Pages }}
+  {{ if gt (len $list) 0 }}
+  <div class="archive-categories">
+    <h3>Article Categories</h3>
+
+    <section>
+      <h4><i class="fa-solid fa-phone-slash"></i>Smartphone-free living</h4>
+      <ul>
+      {{ range $list }}
+        {{ $name := .Title }}
+        {{ if ne $name "Also" }}
+          {{ $hasAlso := false }}
+          {{ range .Pages }}
+            {{ if in .Params.categories "also" }}
+              {{ $hasAlso = true }}
+            {{ end }}
+          {{ end }}
+          {{ if and (not $hasAlso) (gt (len .Pages) 0) }}
+            <li><a href="{{ .Permalink }}">{{ .Title }}</a> ({{ len .Pages }})</li>
+          {{ end }}
+        {{ end }}
+      {{ end }}
+      </ul>
+    </section>
+
+    <section>
+      <h4><i class="fa-solid fa-asterisk"></i>Also</h4>
+      <ul>
+      {{ range $list }}
+        {{ $name := .Title }}
+        {{ if ne $name "Also" }}
+          {{ $hasAlso := false }}
+          {{ range .Pages }}
+            {{ if in .Params.categories "also" }}
+              {{ $hasAlso = true }}
+            {{ end }}
+          {{ end }}
+          {{ if and $hasAlso (gt (len .Pages) 0) }}
+            <li><a href="{{ .Permalink }}">{{ .Title }}</a> ({{ len .Pages }})</li>
+          {{ end }}
+        {{ end }}
+      {{ end }}
+      </ul>
+    </section>
+  </div>
+  {{ end }}
+
+  <div class="full-archives h-feed">
+    <h3>Full Article List</h3>
+    {{ $list := (where .Site.Pages "Type" "post") }}
+    {{ range $list }}
+      <p class="h-entry">
+        <a href="{{ .Permalink }}" class="u-url">
+          {{ if in .Params.categories "also" }}
+            <i class="fa-solid fa-asterisk"></i>
+          {{ else }}
+            <i class="fa-solid fa-phone-slash"></i>
+          {{ end }}
+          <span class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05-0700" }}">{{ .Date.Format "Jan 2, 2006" }}</span>
+        </a>:
+        {{ if .Title }}
+          <span class="p-name"><b>{{ .Title }}</b></span>
+        {{ end }}
+        <span class="p-summary">{{ .Summary | truncate 150 }}</span>
+      </p>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

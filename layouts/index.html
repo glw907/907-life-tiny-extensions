@@ -1,0 +1,91 @@
+{{/*
+  Template: /layouts/index.html
+  Purpose: Tiny homepage that lists posts (Type "post") excluding category "also".
+*/}}
+
+{{ define "main" }}
+  {{ if templates.Exists "partials/microhook-before-post-list.html" }}
+    {{ partial "microhook-before-post-list.html" . }}
+  {{ end }}
+
+  {{/* 1) Only posts, newest first */}}
+  {{ $posts := where .Site.RegularPages "Type" "post" }}
+  {{ $sorted := $posts.ByDate.Reverse }}
+
+  {{/* 2) Exclude posts that have category "also" */}}
+  {{ $noAlso := slice }}
+  {{ range $sorted }}
+    {{ if not (in .Params.categories "also") }}
+      {{ $noAlso = $noAlso | append . }}
+    {{ end }}
+  {{ end }}
+
+  {{ if gt (len $noAlso) 0 }}
+  <div class="posts h-feed">
+    <div class="post_list" role="main">
+      {{ $paginator := .Paginate $noAlso }}
+      {{ range $paginator.Pages }}
+      <div class="post-preview h-entry {{ range .Params.categories }} {{ . | urlize | lower }}{{ end }}">
+        {{ if templates.Exists "partials/microhook-post-list-byline.html" }}
+          {{ partial "microhook-post-list-byline.html" . }}
+        {{ else }}
+          <a href="{{ .Permalink }}" class="post-date u-url">
+            <time class="dt-published" datetime="{{ .Date.Format "2006-01-02 15:04:05 -0700" }}">{{ .Date.Format "Jan 2, 2006" }}</time> ∞
+          </a>
+        {{ end }}
+
+        {{ if .Title }}
+          <h2 class="post-title p-name"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+          {{ if in .RawContent "<!--more-->" }}
+            <div class="p-summary">
+              {{ $split := split .RawContent "<!--more-->" }}
+              {{ $summary := index $split 0 | replaceRE "\\[\\^.*?\\]" "" | replaceRE "\\n\\[\\^.*?\\]:.*" "" }}
+              {{ $summary | markdownify }}
+              <p><a class="read-more" href="{{ .Permalink }}">
+                {{ if templates.Exists "partials/microhook-read-more-text.html" }}
+                  {{ partial "microhook-read-more-text.html" . }}
+                {{ else }}Read More →{{ end }}
+              </a></p>
+            </div>
+          {{ else if .Params.custom_summary }}
+            <div class="p-summary"><p>{{ .Summary | safeHTML }}</p></div>
+          {{ else }}
+            <div class="e-content">{{ .Content }}</div>
+          {{ end }}
+        {{ else }}
+          <div class="e-content">{{ .Content }}</div>
+        {{ end }}
+
+        {{ if templates.Exists "partials/microhook-below-post-in-list.html" }}
+          {{ partial "microhook-below-post-in-list.html" . }}
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+  </div>
+
+  {{ if templates.Exists "partials/microhook-after-post-list.html" }}
+    {{ partial "microhook-after-post-list.html" . }}
+  {{ end }}
+
+  {{ if templates.Exists "partials/microhook-pagination.html" }}
+    {{ partial "microhook-pagination.html" . }}
+  {{ else }}
+  <div class="post-nav">
+    {{ if .Paginator.HasPrev }}
+      <span class="prev"><a href="{{ .Paginator.Prev.URL }}"><span class="arrow">← Newer Posts</span></a></span>
+    {{ end }}
+    {{ if .Paginator.HasNext }}
+      <span class="next"><a href="{{ .Paginator.Next.URL }}"><span class="arrow">Older Posts →</span></a></span>
+    {{ end }}
+  </div>
+  {{ end }}
+
+  {{ else }}
+  <div class="posts h-feed">
+    <div class="post_list" role="main">
+      <p>There are no smartphone-free life posts yet.</p>
+    </div>
+  </div>
+  {{ end }}
+{{ end }}
