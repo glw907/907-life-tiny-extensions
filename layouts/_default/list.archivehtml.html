@@ -31,11 +31,13 @@
         {{ $name := .Title }}
         {{/* Skip the "Also" category itself - it's not a content category */}}
         {{ if ne $name "Also" }}
-          {{/* Check if this category contains any "also" posts */}}
+          {{/* Check if this category contains any "also" posts.
+               Break early once found for efficiency. */}}
           {{ $hasAlso := false }}
           {{ range .Pages }}
             {{ if in .Params.categories "also" }}
               {{ $hasAlso = true }}
+              {{ break }}
             {{ end }}
           {{ end }}
           {{/* Only show if category has NO "also" posts and has content */}}
@@ -56,11 +58,13 @@
         {{ $name := .Title }}
         {{/* Skip the "Also" category itself */}}
         {{ if ne $name "Also" }}
-          {{/* Check if this category contains any "also" posts */}}
+          {{/* Check if this category contains any "also" posts.
+               Break early once found for efficiency. */}}
           {{ $hasAlso := false }}
           {{ range .Pages }}
             {{ if in .Params.categories "also" }}
               {{ $hasAlso = true }}
+              {{ break }}
             {{ end }}
           {{ end }}
           {{/* Only show if category HAS "also" posts and has content */}}
