@@ -1,66 +1,83 @@
 # 907.life Tiny Extensions
 
-Personal Micro.blog plugin for [907.life](https://907.life) that extends Tiny theme with content organization.
+Personal Micro.blog plugin extending the Tiny theme for [907.life](https://907.life).
 
-## What It Does
+## Category Logic
 
-- **Homepage**: Shows only smartphone-free living posts (excludes "also" tagged posts)
-- **Archive page**: Groups categories into "Smartphone-free living" and "Also" sections
-- **Also section** (`/also/`): Lists personal writing (15 most recent)
-- **Reviews pages**: `/reviews/{device-type}/` shows posts tagged with both "reviews" and device type
-- **Guides pages**: `/guides/{topic}/` shows posts tagged with both "guides" and topic
-- **Custom styling**: Typography, colors, dark mode, navigation, icons
+**also**
+Posts tagged "also" are excluded from the homepage but appear in the /also/ section and archive page.
 
-## Installation
+**reviews**
+Posts must be tagged with both "reviews" AND a device type (dumbphones, companion-devices, auxiliary-devices, analog-tools, or software) to appear on the corresponding /reviews/{device-type}/ page.
 
-1. Push to GitHub (public repo)
-2. Micro.blog → Posts → Design → Plug-ins → Find Plug-ins
-3. Add repo URL
-4. Set base design to Tiny
+**guides**
+Posts must be tagged with both "guides" AND a topic (parenting, philosophy, research, social-friction, software, success-stories, workarounds, etc.) to appear on the corresponding /guides/{topic}/ page.
 
-## Tagging Rules
+**Homepage**
+Shows all posts except those tagged "also". Main smartphone-free living content appears here.
 
-**Main content** (appears on homepage):
-```yaml
-categories:
-- reviews
-- dumbphones
-```
+**Archive Page**
+Displays two sections:
+- "Article Categories": Groups categories into "Smartphone-free living" (categories without "also" posts) and "Also" (categories with "also" posts), with post counts
+- "Full Article List": All posts chronologically with Font Awesome icons indicating content type (phone-slash icon for smartphone-free posts, asterisk icon for "also" posts)
 
-**Personal writing** (excluded from homepage):
-```yaml
-categories:
-- also
-- alaska adventures
-```
+## Files and Purposes
 
-**Reviews** (requires both tags):
-```yaml
-categories:
-- reviews
-- dumbphones  # or companion-devices, auxiliary-devices, analog-tools, software
-```
+### Layouts
 
-**Guides** (requires both tags):
-```yaml
-categories:
-- guides
-- parenting  # or philosophy, research, social-friction, success-stories, workarounds, etc.
-```
+**layouts/index.html**
+Homepage template. Lists posts excluding "also" category.
 
-## Files
+**layouts/_default/list.archivehtml.html**
+Archive page template. Groups posts into "Smartphone-free living" and "Also" sections.
 
-- `layouts/` - Templates overriding Tiny defaults
-- `static/custom.css` - All styling (526 lines)
-- `content/` - Section definitions (`_index.md` files)
-- `layouts/partials/` - Microhooks (navigation, footer, title, etc.)
+**layouts/also/list.html**
+Lists 15 most recent posts tagged "also" (personal writing).
 
-## Customization
+**layouts/guides/list.html**
+Lists posts tagged with both "guides" and a specific guide subcategory.
 
-**Colors**: Edit CSS variables in `static/custom.css`
-**Navigation**: Edit `layouts/partials/microhook-navigation.html`
-**Footer**: Edit `layouts/partials/microhook-footer.html`
+**layouts/guides/section.html**
+Displays section title and content for guides sections.
 
-## How It Works
+**layouts/reviews/list.html**
+Lists posts tagged with both "reviews" and a specific device type.
 
-Plugin files override Tiny theme defaults. When Tiny updates, your customizations stay intact because they're isolated in the plugin.
+**layouts/reviews/section.html**
+Displays section title and content for reviews sections.
+
+### Partials (Microhooks)
+
+**layouts/partials/custom_footer.html**
+Empty file to disable default Tiny footer.
+
+**layouts/partials/microhook-archive-lead.html**
+Introductory text for archive page.
+
+**layouts/partials/microhook-footer.html**
+Custom footer with navigation and copyright.
+
+**layouts/partials/microhook-navigation.html**
+Site navigation menu (Reviews, Guides, Archive, About, Also).
+
+**layouts/partials/microhook-post-list-byline.html**
+Post date/time display for post lists.
+
+**layouts/partials/microhook-title.html**
+Site title and tagline.
+
+### Content
+
+**content/also/_index.md**
+Section index for /also/
+
+**content/guides/{subcategory}/_index.md**
+Section indexes for guide subcategories (analog-tools, auxiliary-devices, companion-devices, dumbphones, parenting, philosophy, research, social-friction, software, success-stories, workarounds).
+
+**content/reviews/{device-type}/_index.md**
+Section indexes for review subcategories (analog-tools, auxiliary-devices, companion-devices, dumbphones, software).
+
+### Static Assets
+
+**static/custom.css**
+All custom styling: typography, colors, dark mode, layout, navigation, icons.

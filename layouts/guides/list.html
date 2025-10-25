@@ -1,15 +1,42 @@
 {{/*
   Template: /layouts/guides/list.html
-  Purpose: Shows posts tagged with the category from URL
-  Example URLs: /guides/dumbphones/, /guides/parenting/
+  Purpose: Auto-filtered subcategory pages (Tier 2 of two-tier architecture)
+
+  TWO-TIER ARCHITECTURE:
+  This template is part of a two-tier design pattern:
+
+  Tier 1 (section.html):
+  - Used for top-level editorial hub: /guides/
+  - Displays manually curated content explaining philosophy and linking to subcategories
+
+  Tier 2 (THIS FILE - list.html):
+  - Used for auto-filtered subcategory pages: /guides/parenting/, /guides/philosophy/
+  - Automatically displays posts tagged with both "guides" AND specific topic
+  - Extracts category from URL path (e.g., /guides/parenting/ → "parenting")
+  - Maps category to appropriate icon and display title
+  - No manual maintenance needed when adding posts
+
+  Hugo determines which template to use based on URL depth:
+  - /guides/ → section.html
+  - /guides/{topic}/ → list.html (this file)
+
+  TAGGING REQUIREMENT:
+  Posts must be tagged with BOTH "guides" AND the specific topic to appear:
+  categories:
+  - guides
+  - parenting
+
+  Example URLs: /guides/dumbphones/, /guides/parenting/, /guides/philosophy/
 */}}
 
 {{ define "main" }}
 <div class="archive">
+  {{/* Extract category from URL path: /guides/{category}/ */}}
   {{ $segments := split .RelPermalink "/" }}
   {{ $cat := index $segments 2 }}
 
-  {{/* Determine icon and title based on category */}}
+  {{/* Map each category to appropriate icon and display title.
+       Icons provide visual distinction and reinforce topic at a glance. */}}
   {{ $guideCat := "" }}
   {{ $icon := "" }}
   {{ if eq $cat "dumbphones" }}
@@ -49,7 +76,8 @@
 
   <h2 class="p-name"><i class="fa-solid {{ $icon }}"></i>{{ $guideCat }}</h2>
 
-  {{/* Filter posts that have this category tag */}}
+  {{/* Filter posts by category using intersect to match any post with this tag.
+       Posts must be tagged with BOTH "guides" AND the specific category. */}}
   {{ $all := .Site.RegularPages }}
   {{ $list := where $all "Params.categories" "intersect" (slice $cat) }}
 

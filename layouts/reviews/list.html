@@ -1,15 +1,42 @@
 {{/*
   Template: /layouts/reviews/list.html
-  Purpose: Shows posts tagged with the category from URL
-  Example URLs: /reviews/dumbphones/, /reviews/companion-devices/
+  Purpose: Auto-filtered subcategory pages (Tier 2 of two-tier architecture)
+
+  TWO-TIER ARCHITECTURE:
+  This template is part of a two-tier design pattern:
+
+  Tier 1 (section.html):
+  - Used for top-level editorial hub: /reviews/
+  - Displays manually curated content explaining review methodology and standards
+
+  Tier 2 (THIS FILE - list.html):
+  - Used for auto-filtered subcategory pages: /reviews/dumbphones/, /reviews/software/
+  - Automatically displays posts tagged with both "reviews" AND specific device type
+  - Extracts category from URL path (e.g., /reviews/dumbphones/ → "dumbphones")
+  - Maps category to appropriate icon and display title
+  - No manual maintenance needed when adding posts
+
+  Hugo determines which template to use based on URL depth:
+  - /reviews/ → section.html
+  - /reviews/{device-type}/ → list.html (this file)
+
+  TAGGING REQUIREMENT:
+  Posts must be tagged with BOTH "reviews" AND the specific device type to appear:
+  categories:
+  - reviews
+  - dumbphones
+
+  Example URLs: /reviews/dumbphones/, /reviews/companion-devices/, /reviews/software/
 */}}
 
 {{ define "main" }}
 <div class="archive">
+  {{/* Extract category from URL path: /reviews/{category}/ */}}
   {{ $segments := split .RelPermalink "/" }}
   {{ $cat := index $segments 2 }}
 
-  {{/* Determine icon and title based on category */}}
+  {{/* Map each device type to appropriate icon and display title.
+       Icons provide visual distinction and reinforce topic at a glance. */}}
   {{ $reviewCat := "" }}
   {{ $icon := "" }}
   {{ if eq $cat "dumbphones" }}
@@ -31,7 +58,8 @@
 
   <h2 class="p-name"><i class="fa-solid {{ $icon }}"></i>{{ $reviewCat }}</h2>
 
-  {{/* Filter posts that have this category tag */}}
+  {{/* Filter posts by category using intersect to match any post with this tag.
+       Posts must be tagged with BOTH "reviews" AND the specific device type. */}}
   {{ $all := .Site.RegularPages }}
   {{ $list := where $all "Params.categories" "intersect" (slice $cat) }}
 

@@ -1,8 +1,11 @@
 {{/*
   Template: /layouts/also/list.html
-  Purpose:
-    - Section list for /also/
-    - Shows up to 15 most recent posts tagged "also"
+  Purpose: Displays recent personal writing from the "also" section.
+
+  Shows 15 most recent posts to keep page focused on recent work.
+  Links to full archive for older posts. This is the landing page for
+  all personal content (Alaska adventures, recipes, etc.) that doesn't
+  fit the smartphone-free living theme.
 */}}
 
 {{ define "main" }}
@@ -10,14 +13,18 @@
   <h2 class="p-name">Also</h2>
   <p><em>This page contains all my various "non-dumbphone" writing topics including Alaska adventures, philosophical musings, reviews, recipes, and whatever else comes to mind.</em></p>
 
+  {{/* Get all posts tagged "also" - intersect ensures we match the category */}}
   {{ $all := where site.RegularPages.ByDate.Reverse "Type" "post" }}
   {{ $also := where $all "Params.categories" "intersect" (slice "also") }}
 
   {{ if gt (len $also) 0 }}
     <div class="posts h-feed">
       <div class="post_list" role="main">
+        {{/* Limit to 15 posts to avoid overwhelming the page.
+             Older posts accessible via full archive. */}}
         {{ range first 15 $also }}
           <div class="post-preview h-entry {{ range .Params.categories }} {{ . | urlize | lower }}{{ end }}">
+            {{/* Use custom byline if defined */}}
             {{ if templates.Exists "partials/microhook-post-list-byline.html" }}
               {{ partial "microhook-post-list-byline.html" . }}
             {{ else }}
@@ -26,10 +33,12 @@
               </a>
             {{ end }}
 
+            {{/* Display logic: same as homepage - titled posts can show excerpt */}}
             {{ if .Title }}
               <h3 class="post-title p-name"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
               {{ if in .RawContent "<!--more-->" }}
                 <div class="p-summary">
+                  {{/* Extract content before <!--more--> and strip footnote references */}}
                   {{ $split := split .RawContent "<!--more-->" }}
                   {{ $summary := index $split 0 | replaceRE "\\[\\^.*?\\]" "" | replaceRE "\\n\\[\\^.*?\\]:.*" "" }}
                   {{ $summary | markdownify }}
@@ -45,6 +54,7 @@
                 <div class="e-content">{{ .Content }}</div>
               {{ end }}
             {{ else }}
+              {{/* Untitled posts show full content (microblog style) */}}
               <div class="e-content">{{ .Content }}</div>
             {{ end }}
 
@@ -60,6 +70,7 @@
       </div>
     </div>
   {{ else }}
+    {{/* Empty state - should rarely happen */}}
     <div class="posts h-feed">
       <div class="post_list" role="main">
         <p>There are no posts in the <em>also</em> category.</p>
