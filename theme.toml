@@ -1,0 +1,11 @@
+name = "907.life Tiny Extensions"
+license = "MIT"
+licenselink = "https://github.com/glw907/907-life-tiny-extensions/blob/main/LICENSE"
+description = "Content organization extensions for Tiny theme"
+homepage = "https://github.com/glw907/907-life-tiny-extensions"
+tags = ["minimal", "simple"]
+min_version = "0.59"
+
+[author]
+  name = "Geoffrey L Wright"
+  homepage = "https://907.life"
