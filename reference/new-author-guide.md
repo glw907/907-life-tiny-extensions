@@ -151,10 +151,54 @@ Write in your own voice, but aim for:
 
 ### Structure
 
-- Use clear section headings (## for main sections, ### for subsections)
 - Keep paragraphs short (3-5 sentences typically)
 - Use bullet points for lists and parallel ideas
 - Start with the problem before offering solutions
+
+### Heading Hierarchy
+
+Use headings to organize your content into clear sections:
+
+- **# H1**: Post title only (use once at the top)
+- **## H2**: Main sections of your post (Introduction, The Problem, Solution, etc.)
+- **### H3**: Subsections within a main section
+- **#### H4**: Rarely needed; use only for deep nested content
+
+**Example structure:**
+```markdown
+# Post Title
+
+## Introduction
+
+## The Core Problem
+
+### Why This Matters
+### Common Obstacles
+
+## My Solution
+
+### Step 1: Initial Setup
+### Step 2: Daily Practice
+```
+
+Don't skip levels (e.g., don't jump from ## to ####).
+
+### Text Emphasis
+
+Use bold and italic sparingly for actual emphasis:
+
+- **Bold (`**text**`)**: For important terms, key concepts, or strong emphasis. Use when you'd raise your voice slightly if speaking.
+  - Example: "The **Light Phone II** has no browser at all."
+  - Example: "This is **not** a minor inconvenience."
+
+- *Italic (`*text*`)* or _Italic (`_text_`)_: For gentle emphasis, titles of works, or technical terms being introduced.
+  - Example: "What I call *intentional friction* — the deliberate choice to add resistance."
+  - Example: "The app uses a protocol called *XMPP*."
+
+**Don't use formatting for:**
+- Entire sentences (just makes text harder to read)
+- Decoration or variety (every word becomes less meaningful)
+- Section headings (use proper heading levels instead)
 
 ### Specificity
 
