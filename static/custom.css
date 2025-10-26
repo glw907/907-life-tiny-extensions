@@ -51,11 +51,13 @@ h1, h2, h3, h4, h5, h6 {
 /* ===================================================
    BASE SIZE + VERTICAL RHYTHM
    Root font size: 16px, 17px on wider screens
+   Body font-size set to 1rem to override Tiny's 18px
    Body line-height for reading comfort
    Paragraphs get modest bottom margin
    =================================================== */
 
 html { font-size: 16px; }
+body { font-size: 1rem; } /* Override Tiny's 18px base */
 @media (min-width: 48rem) { html { font-size: 17px; } }
 
 body { line-height: 1.6; }
@@ -314,12 +316,21 @@ blockquote {
 /* ===================================================
    CODE AND TABLES
    Code uses system monospace fallbacks
+   Inline code (p>code, li>code) matches pre code background
    Pre blocks scroll horizontally when needed
    Tables are compact and full width
    =================================================== */
 
 code {
   font-family: var(--font_monospace_code, ui-monospace, SFMono-Regular, Menlo, monospace);
+}
+
+p > code,
+li > code {
+  background: rgba(0, 0, 0, 0.04);
+  padding: 2px 4px;
+  font-size: 0.9em;
+  border-radius: 5px;
 }
 
 pre code {
@@ -347,6 +358,11 @@ thead th {
 }
 
 @media (prefers-color-scheme: dark) {
+  p > code,
+  li > code {
+    background: rgba(255, 255, 255, 0.06);
+  }
+
   pre code {
     background: rgba(255, 255, 255, 0.06);
   }
