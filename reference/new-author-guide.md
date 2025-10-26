@@ -218,66 +218,76 @@ For detailed style guidance, ask the site editor for access to the internal writ
 
 ---
 
-## Markdown Basics
+## About Markdown
 
-Micro.blog and 907.life use Markdown for formatting. Here are the essentials:
+**What is Markdown?** Markdown is a simple way to format text using plain characters. Instead of clicking formatting buttons, you type simple symbols around your text. For example, `**bold**` becomes **bold** and `*italic*` becomes *italic*.
 
-### Headings
+**Why use it?** Micro.blog (the platform 907.life uses) formats all posts using Markdown. It's designed to be readable even before it's formatted — so `# Heading` looks like a heading even in plain text.
+
+**The good news:** You probably already know most of it from texting and email. If you've ever used `*asterisks*` for emphasis or dashes for lists, you're halfway there.
+
+---
+
+## Markdown Quick Reference
+
+Here are the formatting options you'll use most often:
+
+| What You Want | What You Type | What You Get |
+|---------------|---------------|--------------|
+| **Heading 1** (title) | `# Heading` | <h1 style="font-size: 1.5em; margin: 0;">Heading</h1> |
+| **Heading 2** (section) | `## Heading` | <h2 style="font-size: 1.3em; margin: 0;">Heading</h2> |
+| **Heading 3** (subsection) | `### Heading` | <h3 style="font-size: 1.1em; margin: 0;">Heading</h3> |
+| **Bold text** | `**bold**` or `__bold__` | **bold** |
+| **Italic text** | `*italic*` or `_italic_` | *italic* |
+| **Link** | `[link text](https://example.com)` | [link text](https://example.com) |
+| **Bulleted list** | `- Item` (dash + space) | • Item |
+| **Numbered list** | `1. Item` (number + period + space) | 1. Item |
+| **Quote** | `> Quote text` | Indented quote block |
+| **Inline code** | `` `code` `` (backticks) | `code` |
+
+### Common Patterns
+
+**Paragraph breaks:** Leave a blank line between paragraphs.
 ```markdown
-## Main Section
-### Subsection
-#### Smaller Heading
+First paragraph here.
+
+Second paragraph here.
 ```
 
-### Text Formatting
-```markdown
-**bold text**
-*italic text*
-```
-
-### Links
-```markdown
-[link text](https://example.com)
-```
-
-### Lists
-
-Unordered:
+**Multiple list items:**
 ```markdown
 - First item
 - Second item
 - Third item
+
+1. First numbered item
+2. Second numbered item
+3. Third numbered item
 ```
 
-Ordered:
+**Adding images:** Upload to Micro.blog first, then insert:
 ```markdown
-1. First item
-2. Second item
-3. Third item
+![Description of image](https://yourdomain.com/uploads/image.jpg)
 ```
 
-### Images
+**Block quotes:**
 ```markdown
-![alt text](image-url.jpg)
+> This is a quote from someone else.
+> It can span multiple lines.
 ```
 
-### Blockquotes
-```markdown
-> This is a quote
-```
+---
 
-### Code
-```markdown
-Inline `code` uses backticks.
+## Learning More
 
-```
-Code blocks use triple backticks
-```
-```
+**Start here for complete documentation:**
+[Markdown Guide](https://www.markdownguide.org/basic-syntax/) — Clear explanations with examples for every element
 
-**More Markdown help**:
-- [Micro.blog Markdown guide](https://help.micro.blog/t/markdown-basics/45)
-- [CommonMark reference](https://commonmark.org/help/)
+**Micro.blog-specific help:**
+[Micro.blog Markdown guide](https://help.micro.blog/t/markdown-basics/45) — Platform-specific tips and features
+
+**Quick reference:**
+[CommonMark reference](https://commonmark.org/help/) — One-page cheat sheet for fast lookup
 
 ---
 
