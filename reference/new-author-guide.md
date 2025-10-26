@@ -343,7 +343,13 @@ Here's an example bio from one of the site's contributors:
 
 ## Questions?
 
-If you have questions about contributing, reach out to the site editor. The goal is to make contributing as straightforward as possible while maintaining the site's quality and focus.
+If you have questions about contributing, reach out to Geoff Wright:
+
+**Email**: [geoff@907.life](mailto:geoff@907.life)
+**Phone**: 907-277-9397 (home)
+**Mobile**: 907-317-8472 (off evenings and weekends)
+
+The goal is to make contributing as straightforward as possible while maintaining the site's quality and focus.
 
 Welcome to 907.life!
 
