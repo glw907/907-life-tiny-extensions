@@ -1,0 +1,261 @@
+# New Author Guide for 907.life
+
+Welcome! This guide will help you contribute guest posts to 907.life. Whether you're writing about smartphone-free living, sharing personal experiences, or offering practical advice, this guide covers everything you need to get started.
+
+---
+
+## About 907.life
+
+**Purpose**: 907.life documents the practical realities of living without a smartphone—what works, what doesn't, and how to navigate common obstacles. The site offers reviews of alternative devices, guides for specific challenges, and essays on intentional technology use.
+
+**Philosophy**: All content on 907.life reflects four core principles:
+
+1. **Intentionality** - Deliberate choices over defaults and conventions
+2. **Accessibility** - Clear, readable content that explains complex ideas thoroughly
+3. **Honesty** - Personal experience grounds all claims; transparent about limitations
+4. **Focus** - Respect for reader attention; substance over polish
+
+Your writing doesn't need to perfectly match the site owner's voice, but it should align with these principles: be specific, honest about trade-offs, and grounded in real experience rather than theory.
+
+---
+
+## How to Submit Your Post
+
+You have two options for submitting content:
+
+### Option 1: Send a Markdown File
+
+Write your post in Markdown (see Markdown basics below) and send the file to the site owner. Include:
+- Your post content in Markdown format
+- A proposed title
+- Suggested categories (see Category Guide below)
+- A short author bio (see Bio Guidelines below)
+
+### Option 2: Use Micro.blog Directly
+
+If you're given access to the Micro.blog interface, you can post directly through the web editor. See [Micro.blog's posting guide](https://help.micro.blog/t/posting-from-the-web/46) for details on using the web interface.
+
+---
+
+## Writing Your Post
+
+### Title and Categories
+
+**Title**: Use a clear, descriptive title that indicates what the post is about. Avoid clickbait or vague titles.
+
+- ✅ Good: "Managing School Communication Without a Smartphone"
+- ❌ Avoid: "You Won't Believe This One Weird Trick"
+
+**Categories**: Every post needs at least one category. Categories determine where your post appears on the site.
+
+#### Basic Categories
+
+Choose the most relevant category for your post:
+
+- `philosophy` - Conceptual thinking about technology and attention
+- `workarounds` - Practical solutions to specific smartphone-dependency problems
+- `success-stories` - Personal accounts of what works
+- `social-friction` - Navigating social expectations and peer pressure
+- `research` - Academic or scientific perspectives
+- `parenting` - Challenges and solutions for parents
+- And others - see the [site archive](https://907.life/archive.html) for all categories
+
+#### Meta-Categories (Special Handling)
+
+Some categories require additional tags and follow specific formats:
+
+**Reviews** - Evaluations of devices, apps, or tools
+- Must include: `reviews` + device type (`dumbphones`, `companion-devices`, `auxiliary-devices`, `analog-tools`, or `software`)
+- Example: `categories: [reviews, dumbphones]`
+- Structure: Establish credibility → explain framework → assess features → discuss trade-offs
+
+**Guides** - Step-by-step or practical how-to content
+- Must include: `guides` + topic (e.g., `parenting`, `navigation`, `communication`)
+- Example: `categories: [guides, parenting]`
+- Structure: Problem → solution → practical steps → troubleshooting
+
+**Also** - Personal or off-topic content
+- Include `also` tag to exclude from main homepage
+- Example: `categories: [also, alaska-adventures]`
+- Note: "Also" content appears in a separate section, not the main feed
+
+---
+
+## Site Navigation & Content
+
+The site is organized into several key sections:
+
+- **Welcome** - Introduction and philosophy
+- **Guides** - Practical how-to content organized by topic
+- **Reviews** - Device and tool evaluations organized by type
+- **Archive** - Complete chronological listing with category filters
+- **About** - Site owner bio
+- **Also** - Personal writing separate from main content
+
+When writing, consider where your post will appear and what readers in that section expect to find.
+
+---
+
+## Style Guidelines
+
+### Voice and Tone
+
+Write in your own voice, but aim for:
+
+- **Conversational authority** - Demonstrate knowledge through specificity, not credentials
+- **Honesty** - Acknowledge limitations and trade-offs; avoid absolutes
+- **Practical focus** - Ground claims in real experience with concrete examples
+
+### Structure
+
+- Use clear section headings (## for main sections, ### for subsections)
+- Keep paragraphs short (3-5 sentences typically)
+- Use bullet points for lists and parallel ideas
+- Start with the problem before offering solutions
+
+### Specificity
+
+- Name actual products, situations, and obstacles
+- Provide real examples from your experience
+- Include numbers when relevant ("three months," "15 minutes")
+- Avoid vague generalizations like "many people find..."
+
+### What to Avoid
+
+- ❌ Marketing language ("revolutionary," "game-changing")
+- ❌ Preachy tone ("you must," "everyone should")
+- ❌ Affiliate links or product promotions
+- ❌ Ornamental language for its own sake
+
+For detailed style guidance, see the site's internal writing documentation (ask the site owner).
+
+---
+
+## Markdown Basics
+
+Micro.blog and 907.life use Markdown for formatting. Here are the essentials:
+
+### Headings
+```markdown
+## Main Section
+### Subsection
+#### Smaller Heading
+```
+
+### Text Formatting
+```markdown
+**bold text**
+*italic text*
+```
+
+### Links
+```markdown
+[link text](https://example.com)
+```
+
+### Lists
+
+Unordered:
+```markdown
+- First item
+- Second item
+- Third item
+```
+
+Ordered:
+```markdown
+1. First item
+2. Second item
+3. Third item
+```
+
+### Images
+```markdown
+![alt text](image-url.jpg)
+```
+
+### Blockquotes
+```markdown
+> This is a quote
+```
+
+### Code
+```markdown
+Inline `code` uses backticks.
+
+```
+Code blocks use triple backticks
+```
+```
+
+**More Markdown help**:
+- [Micro.blog Markdown guide](https://help.micro.blog/t/markdown-basics/45)
+- [CommonMark reference](https://commonmark.org/help/)
+
+---
+
+## Recommended Markdown Writing Tools
+
+### macOS
+- **[iA Writer](https://ia.net/writer)** - Distraction-free with excellent typography
+- **[Ulysses](https://ulysses.app/)** - Full-featured writing environment
+- **[Typora](https://typora.io/)** - Live preview as you type
+- **[BBEdit](https://www.barebones.com/products/bbedit/)** - Powerful text editor with Markdown support
+
+### iOS/iPadOS
+- **[iA Writer](https://ia.net/writer)** - Cross-platform sync
+- **[Drafts](https://getdrafts.com/)** - Quick capture with Markdown support
+- **[1Writer](https://1writerapp.com/)** - Clean, focused writing
+
+### Windows
+- **[Typora](https://typora.io/)** - Elegant live preview
+- **[MarkText](https://www.marktext.cc/)** - Free and open source
+- **[Obsidian](https://obsidian.md/)** - Knowledge base with Markdown support
+
+### Linux
+- **[Typora](https://typora.io/)** - Available for Linux
+- **[ghostwriter](https://ghostwriter.kde.org/)** - Distraction-free editor
+- **[MarkText](https://www.marktext.cc/)** - Cross-platform option
+- **[Zettlr](https://www.zettlr.com/)** - Academic-focused Markdown editor
+
+---
+
+## Writing Your Author Bio
+
+Guest authors need a short bio (2-3 paragraphs) for the contact/contributors page.
+
+### Guidelines
+
+- Use first-person, active voice
+- Include geographic location if comfortable
+- Share relevant interests or background
+- Explain your connection to the site's themes
+- Keep it concise but personal
+
+### Example Bio
+
+Here's the site owner's bio as a reference:
+
+> I'm Geoff Wright, living in Anchorage, Alaska. I grew up in Iowa, spent time in Nebraska and Maryland, and eventually settled in Alaska where I've been for [years].
+>
+> I love snow, cross country skiing, biking, and the kind of quiet that comes from winter darkness and sub-zero temperatures. I haven't used a smartphone in three years, which shapes how I navigate both technology and daily life.
+>
+> This site documents that experience—not as prescription, but as one person's experiment in reclaiming attention and building a more intentional relationship with technology.
+
+**Your bio should**:
+- Establish who you are and where you're from
+- Share personal interests that paint a picture
+- Connect to the site's themes (smartphone-free living, intentional technology, etc.)
+- Use specific details rather than abstractions
+
+---
+
+## Questions?
+
+If you have questions about contributing, reach out to the site owner. The goal is to make contributing as straightforward as possible while maintaining the site's quality and focus.
+
+Welcome to 907.life!
+
+---
+
+**Last Updated**: 2025-10-25
