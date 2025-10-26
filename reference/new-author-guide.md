@@ -27,26 +27,25 @@ You have two options for submitting content:
 
 Write your post in Markdown (see Markdown basics below) and send the file to the site editor.
 
-**Using Front Matter**
+**What to Include:**
 
-Include title and categories at the top of your Markdown file using front matter (YAML format):
+When you send your Markdown file, include in your message:
+- Your proposed title
+- Suggested categories (see Category Guide below)
+- A short author bio (see Bio Guidelines below)
+
+You can also add these as a comment at the top of your Markdown file:
 
 ```markdown
----
-title: "Your Post Title Here"
-categories: [reviews, dumbphones]
----
+<!--
+Title: Managing School Communication Without a Smartphone
+Categories: guides, parenting
+-->
 
 Your post content starts here...
 ```
 
-**What to Include:**
-- Your post content in Markdown format
-- Title in front matter (see above)
-- Suggested categories in front matter (see Category Guide below)
-- A short author bio (see Bio Guidelines below)
-
-Front matter should be at the very beginning of the file, enclosed by triple dashes (`---`).
+The site editor will add the title and categories when publishing your post.
 
 ### Option 2: Use Micro.blog Directly
 
