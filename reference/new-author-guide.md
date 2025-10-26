@@ -27,25 +27,29 @@ You have two options for submitting content:
 
 Write your post in Markdown (see Markdown basics below) and send the file to the site editor.
 
-**What to Include:**
+**Format Your File:**
 
-When you send your Markdown file, include in your message:
-- Your proposed title
-- Suggested categories (see Category Guide below)
-- A short author bio (see Bio Guidelines below)
-
-You can also add these as a comment at the top of your Markdown file:
+Use a Markdown comment at the top of your file for categories, notes, and suggestions:
 
 ```markdown
 <!--
-Title: Managing School Communication Without a Smartphone
 Categories: guides, parenting
+Notes: Not sure if "parenting" is the right category - maybe "school-workarounds"?
+Could also work under "communication"
 -->
+
+# Managing School Communication Without a Smartphone
 
 Your post content starts here...
 ```
 
-The site editor will add the title and categories when publishing your post.
+**Key Points:**
+- **Title**: Use a markdown heading (`# Your Title Here`) at the start of your content
+- **Categories**: Suggest one or more in the comment (see Category Guide below)
+- **New categories**: If existing categories don't fit, suggest a new one in the Notes
+- **Author bio**: Include a short bio (see Bio Guidelines below) when sending your file
+
+The HTML comment (`<!-- -->`) won't appear if the file is published, so it's safe to include questions, notes, or alternative category suggestions there.
 
 ### Option 2: Use Micro.blog Directly
 
@@ -77,7 +81,7 @@ See [Micro.blog's posting guide](https://help.micro.blog/t/posting-from-the-web/
 - ✅ Good: "Managing School Communication Without a Smartphone"
 - ❌ Avoid: "You Won't Believe This One Weird Trick"
 
-**Categories**: Every post needs at least one category. Categories determine where your post appears on the site.
+**Categories**: Every post needs at least one category. Categories determine where your post appears on the site. If you don't see a good match in the existing categories, suggest a new one — the site evolves based on contributor needs.
 
 #### Basic Categories
 
