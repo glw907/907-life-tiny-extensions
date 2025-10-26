@@ -237,26 +237,20 @@ Code blocks use triple backticks
 ## Recommended Markdown Writing Tools
 
 ### macOS
-- **[iA Writer](https://ia.net/writer)** - Distraction-free with excellent typography
-- **[Ulysses](https://ulysses.app/)** - Full-featured writing environment
-- **[Typora](https://typora.io/)** - Live preview as you type
-- **[BBEdit](https://www.barebones.com/products/bbedit/)** - Powerful text editor with Markdown support
+- **[iA Writer](https://ia.net/writer)**: Distraction-free editor with beautiful typography and cross-platform sync.
+- **[BBEdit](https://www.barebones.com/products/bbedit/)**: Professional-grade text editor with powerful search and free tier available.
 
 ### iOS/iPadOS
-- **[iA Writer](https://ia.net/writer)** - Cross-platform sync
-- **[Drafts](https://getdrafts.com/)** - Quick capture with Markdown support
-- **[1Writer](https://1writerapp.com/)** - Clean, focused writing
+- **[iA Writer](https://ia.net/writer)**: Clean interface with iCloud sync to desktop versions.
+- **[Drafts](https://getdrafts.com/)**: Quick-capture focused app ideal for starting posts on mobile.
 
 ### Windows
-- **[Typora](https://typora.io/)** - Elegant live preview
-- **[MarkText](https://www.marktext.cc/)** - Free and open source
-- **[Obsidian](https://obsidian.md/)** - Knowledge base with Markdown support
+- **[Typora](https://typora.io/)**: Elegant live preview that shows formatting as you type.
+- **[Obsidian](https://obsidian.md/)**: Knowledge-base focused with powerful linking and organization features.
 
 ### Linux
-- **[Typora](https://typora.io/)** - Available for Linux
-- **[ghostwriter](https://ghostwriter.kde.org/)** - Distraction-free editor
-- **[MarkText](https://www.marktext.cc/)** - Cross-platform option
-- **[Zettlr](https://www.zettlr.com/)** - Academic-focused Markdown editor
+- **[Typora](https://typora.io/)**: Same clean live-preview experience, available across platforms.
+- **[Zettlr](https://www.zettlr.com/)**: Academic-oriented editor with citation support and advanced organization.
 
 ---
 
