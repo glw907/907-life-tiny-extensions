@@ -327,11 +327,11 @@ All authors need a short bio (2-3 paragraphs) for the contact/contributors page.
 
 Here's an example bio from one of the site's contributors:
 
-> I'm Geoff Wright, living in Anchorage, Alaska. I grew up in Iowa, spent time in Nebraska and Maryland, and eventually settled in Alaska where I've been for [years].
+> I'm a husband and father of three living in Anchorage, Alaska, and the primary author of this site. I love snow, cross country skiing, biking, sailing, trails, books, general nerdery, trees, kindness, and Sunday morning pancakes. I was born in Iowa, and I've also lived in Nebraska, Massachusetts, and Maryland. I graduated with from St. Mary's College of Maryland with a BA in Philosophy.
 >
-> I love snow, cross country skiing, biking, and the kind of quiet that comes from winter darkness and sub-zero temperatures. I haven't used a smartphone in three years, which shapes how I navigate both technology and daily life.
+> I owned Pango Technology, Inc., a software development firm, until 2023 when I sold my shares to my partners and partially retired. These days I dedicate my time to doing good in my community: working as a small business counselor with the Alaska Small Business Development Center, coaching cross country skiing at Bettye Davis East High School, and volunteering as a sailing instructor at the Alaska Sailing Club.
 >
-> This site documents that experience — not as prescription, but as one person's experiment in reclaiming attention and building a more intentional relationship with technology.
+> I haven't used a smartphone in three years.
 
 **Your bio should**:
 - Establish who you are and where you're from
