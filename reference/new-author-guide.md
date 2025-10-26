@@ -25,15 +25,47 @@ You have two options for submitting content:
 
 ### Option 1: Send a Markdown File
 
-Write your post in Markdown (see Markdown basics below) and send the file to the site editor. Include:
+Write your post in Markdown (see Markdown basics below) and send the file to the site editor.
+
+**Using Front Matter**
+
+Include title and categories at the top of your Markdown file using front matter (YAML format):
+
+```markdown
+---
+title: "Your Post Title Here"
+categories: [reviews, dumbphones]
+---
+
+Your post content starts here...
+```
+
+**What to Include:**
 - Your post content in Markdown format
-- A proposed title
-- Suggested categories (see Category Guide below)
+- Title in front matter (see above)
+- Suggested categories in front matter (see Category Guide below)
 - A short author bio (see Bio Guidelines below)
+
+Front matter should be at the very beginning of the file, enclosed by triple dashes (`---`).
 
 ### Option 2: Use Micro.blog Directly
 
-If you're given access to the Micro.blog interface, you can post directly through the web editor. See [Micro.blog's posting guide](https://help.micro.blog/t/posting-from-the-web/46) for details on using the web interface.
+If you're given access to the Micro.blog interface, you can post directly through the web editor.
+
+**Finding Title and Categories**
+
+These fields are somewhat hidden in the Micro.blog interface:
+
+1. **Title**: Click the "Title" button in the toolbar above the editor (looks like a capital "T" or text formatting icon). This reveals a title field at the top of your post.
+
+2. **Categories**: Click the "..." (three dots) menu button in the toolbar, then select "Categories" from the dropdown. This opens a field where you can type category names, separated by commas.
+
+**Tips:**
+- Without a title, your post will be treated as a short "micro" post
+- Categories must be typed exactly as they appear in the [archive](https://907.life/archive.html)
+- Multiple categories are separated by commas: `reviews, dumbphones`
+
+See [Micro.blog's posting guide](https://help.micro.blog/t/posting-from-the-web/46) for more details on using the web interface.
 
 ---
 
