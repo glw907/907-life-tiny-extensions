@@ -6,14 +6,14 @@ Welcome! This guide will help you contribute guest posts to 907.life. Whether yo
 
 ## About 907.life
 
-**Purpose**: 907.life documents the practical realities of living without a smartphone—what works, what doesn't, and how to navigate common obstacles. The site offers reviews of alternative devices, guides for specific challenges, and essays on intentional technology use.
+**Purpose**: 907.life documents the practical realities of living without a smartphone — what works, what doesn't, and how to navigate common obstacles. The site offers reviews of alternative devices, guides for specific challenges, and essays on intentional technology use.
 
 **Philosophy**: All content on 907.life reflects four core principles:
 
-1. **Intentionality** - Deliberate choices over defaults and conventions
-2. **Accessibility** - Clear, readable content that explains complex ideas thoroughly
-3. **Honesty** - Personal experience grounds all claims; transparent about limitations
-4. **Focus** - Respect for reader attention; substance over polish
+1. **Intentionality**: Deliberate choices over defaults and conventions
+2. **Accessibility**: Clear, readable content that explains complex ideas thoroughly
+3. **Honesty**: Personal experience grounds all claims; transparent about limitations
+4. **Focus**: Respect for reader attention; substance over polish
 
 Your writing doesn't need to perfectly match the site owner's voice, but it should align with these principles: be specific, honest about trade-offs, and grounded in real experience rather than theory.
 
@@ -64,17 +64,25 @@ Choose the most relevant category for your post:
 
 Some categories require additional tags and follow specific formats:
 
-**Reviews** - Evaluations of devices, apps, or tools
+**Reviews**: Evaluations of devices, apps, or tools
 - Must include: `reviews` + device type (`dumbphones`, `companion-devices`, `auxiliary-devices`, `analog-tools`, or `software`)
 - Example: `categories: [reviews, dumbphones]`
-- Structure: Establish credibility → explain framework → assess features → discuss trade-offs
+- Structure:
+  - Establish credibility
+  - Explain your evaluation framework
+  - Assess features
+  - Discuss trade-offs
 
-**Guides** - Step-by-step or practical how-to content
+**Guides**: Step-by-step or practical how-to content
 - Must include: `guides` + topic (e.g., `parenting`, `navigation`, `communication`)
 - Example: `categories: [guides, parenting]`
-- Structure: Problem → solution → practical steps → troubleshooting
+- Structure:
+  - Problem
+  - Solution
+  - Practical steps
+  - Troubleshooting
 
-**Also** - Personal or off-topic content
+**Also**: Personal or off-topic content
 - Include `also` tag to exclude from main homepage
 - Example: `categories: [also, alaska-adventures]`
 - Note: "Also" content appears in a separate section, not the main feed
@@ -240,7 +248,7 @@ Here's the site owner's bio as a reference:
 >
 > I love snow, cross country skiing, biking, and the kind of quiet that comes from winter darkness and sub-zero temperatures. I haven't used a smartphone in three years, which shapes how I navigate both technology and daily life.
 >
-> This site documents that experience—not as prescription, but as one person's experiment in reclaiming attention and building a more intentional relationship with technology.
+> This site documents that experience — not as prescription, but as one person's experiment in reclaiming attention and building a more intentional relationship with technology.
 
 **Your bio should**:
 - Establish who you are and where you're from
