@@ -4,23 +4,44 @@
 
 **When this file path is provided at the start of a session, follow these steps:**
 
-1. **Read all context documentation files** in this directory:
-   - `philosophy.md` - Core principles guiding all decisions
-   - `writing-guide.md` - Standards for written content
-   - `writing-examples.md` - Concrete demonstrations of writing style
-   - `site-guide.md` - Information architecture and content organization
-   - `code-guide.md` - Technical standards for templates and CSS
+1. **Ask what type of work is being done** using the AskUserQuestion tool with these options:
+   - **Writing/Content** - Drafting or editing blog posts, pages, or site content
+   - **CSS/Design** - Modifying styles, typography, colors, or visual elements
+   - **Templates/Architecture** - Working with Hugo templates, site structure, or navigation
+   - **General/Exploratory** - Multiple tasks or exploring the codebase
 
-2. **Understand the project**: This is a Micro.blog plugin for 907.life that extends the Tiny Hugo theme. All work must align with four core principles: intentionality, accessibility, honesty, and focus.
+2. **Load context files based on the response**:
 
-3. **Internalize the context**: After reading all files, you should understand:
-   - The site's philosophy and how it connects writing, design, and code
-   - Writing voice, tone, and structural patterns
-   - Content organization and template patterns
-   - CSS organization and commenting standards
-   - When to apply which combination of context documents
+   **For Writing/Content:**
+   - `philosophy.md` - Core principles
+   - `writing-guide.md` - Writing standards
+   - `writing-examples.md` - Style examples
 
-4. **Confirm readiness**: Briefly summarize your understanding of the project and indicate you're ready to assist with writing, coding, design, or architectural tasks.
+   **For CSS/Design:**
+   - `philosophy.md` - Core principles
+   - `code-guide.md` - Technical standards
+   - `tiny-theme-reference.md` - Base theme CSS for compatibility checking
+
+   **For Templates/Architecture:**
+   - `philosophy.md` - Core principles
+   - `site-guide.md` - Information architecture
+   - `code-guide.md` - Technical standards
+   - `tiny-theme-reference.md` - Base theme templates for reference
+
+   **For General/Exploratory:**
+   - `philosophy.md` - Core principles
+   - `writing-guide.md` - Writing standards
+   - `writing-examples.md` - Style examples
+   - `site-guide.md` - Information architecture
+   - `code-guide.md` - Technical standards
+   - Optionally offer to load `tiny-theme-reference.md` if user indicates template/CSS work may be involved
+
+3. **Understand the project**: This is a Micro.blog plugin for 907.life that extends the Tiny Hugo theme. All work must align with four core principles: intentionality, accessibility, honesty, and focus.
+
+4. **Confirm readiness**: Briefly summarize:
+   - What files were loaded based on the work type
+   - Your understanding of the project
+   - That you're ready to assist with the specified task
 
 ---
 
@@ -133,6 +154,20 @@ The philosophy document provides the foundational principles that inform all dec
 
 **Use when**: Understanding writing style through examples rather than description, seeing patterns in action, calibrating tone
 
+### tiny-theme-reference.md
+**What**: Base Tiny theme CSS and template source code
+
+**Contains**:
+- Complete main.css from Tiny theme (651 lines)
+- Full source code for key templates (baseof, single, list, index, archive)
+- Microhook reference and availability
+- Template override documentation
+- CSS override strategy
+
+**Use when**: Working on CSS to ensure compatibility with base theme, creating or modifying templates, understanding template inheritance, checking what base theme provides
+
+**Note**: This file is loaded conditionally based on work type to conserve tokens. Not automatically loaded for writing tasks.
+
 ## Key Principles for Claude Assistance
 
 1. **Consistency First**: All suggestions should align with established patterns in these documents
@@ -155,12 +190,13 @@ The philosophy document provides the foundational principles that inform all dec
 
 ```
 context/
-├── establish-context.md    # This file - starting prompt and context instructions
-├── philosophy.md           # Core principles and design philosophy
-├── writing-guide.md        # Content creation standards
-├── writing-examples.md     # Actual excerpts demonstrating style
-├── site-guide.md          # Information architecture and navigation
-└── code-guide.md          # Technical standards and commenting
+├── establish-context.md      # This file - starting prompt and context instructions
+├── philosophy.md             # Core principles and design philosophy
+├── writing-guide.md          # Content creation standards
+├── writing-examples.md       # Actual excerpts demonstrating style
+├── site-guide.md            # Information architecture and navigation
+├── code-guide.md            # Technical standards and commenting
+└── tiny-theme-reference.md  # Base Tiny theme CSS and templates (loaded as needed)
 
 ../
 ├── README.md              # Plugin files and technical documentation
