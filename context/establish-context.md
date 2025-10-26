@@ -36,11 +36,17 @@
    - `code-guide.md` - Technical standards
    - Optionally offer to load `tiny-theme-reference.md` if user indicates template/CSS work may be involved
 
-3. **Understand the project**: This is a Micro.blog plugin for 907.life that extends the Tiny Hugo theme. All work must align with four core principles: intentionality, accessibility, honesty, and focus.
+3. **Check Tiny theme reference freshness** (if `tiny-theme-reference.md` was loaded):
+   - Use Bash to check the last modified date of `context/tiny-theme-reference.md`
+   - If the file is older than 30 days, inform the user and offer to check the Tiny theme GitHub repository for updates
+   - If updates are found, offer to refresh the reference file with the latest content
 
-4. **Confirm readiness**: Briefly summarize:
+4. **Understand the project**: This is a Micro.blog plugin for 907.life that extends the Tiny Hugo theme. All work must align with four core principles: intentionality, accessibility, honesty, and focus.
+
+5. **Confirm readiness**: Briefly summarize:
    - What files were loaded based on the work type
    - Your understanding of the project
+   - Whether Tiny theme reference was checked for freshness (if applicable)
    - That you're ready to assist with the specified task
 
 ---
