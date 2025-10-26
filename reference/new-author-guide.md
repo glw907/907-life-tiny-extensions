@@ -1,6 +1,6 @@
 # New Author Guide for 907.life
 
-Welcome! This guide will help you contribute guest posts to 907.life. Whether you're writing about smartphone-free living, sharing personal experiences, or offering practical advice, this guide covers everything you need to get started.
+Welcome! This guide will help you contribute to 907.life. Whether you're writing about smartphone-free living, sharing personal experiences, or offering practical advice, this guide covers everything you need to get started.
 
 ---
 
@@ -15,7 +15,7 @@ Welcome! This guide will help you contribute guest posts to 907.life. Whether yo
 3. **Honesty**: Personal experience grounds all claims; transparent about limitations
 4. **Focus**: Respect for reader attention; substance over polish
 
-Your writing doesn't need to perfectly match the site owner's voice, but it should align with these principles: be specific, honest about trade-offs, and grounded in real experience rather than theory.
+907.life is a multi-author site that values different voices and perspectives. Your writing doesn't need to match other contributors' styles, but it should align with these principles: be specific, honest about trade-offs, and grounded in real experience rather than theory.
 
 ---
 
@@ -25,7 +25,7 @@ You have two options for submitting content:
 
 ### Option 1: Send a Markdown File
 
-Write your post in Markdown (see Markdown basics below) and send the file to the site owner. Include:
+Write your post in Markdown (see Markdown basics below) and send the file to the site editor. Include:
 - Your post content in Markdown format
 - A proposed title
 - Suggested categories (see Category Guide below)
@@ -135,7 +135,7 @@ Write in your own voice, but aim for:
 - ❌ Affiliate links or product promotions
 - ❌ Ornamental language for its own sake
 
-For detailed style guidance, see the site's internal writing documentation (ask the site owner).
+For detailed style guidance, ask the site editor for access to the internal writing documentation.
 
 ---
 
@@ -230,7 +230,7 @@ Code blocks use triple backticks
 
 ## Writing Your Author Bio
 
-Guest authors need a short bio (2-3 paragraphs) for the contact/contributors page.
+All authors need a short bio (2-3 paragraphs) for the contact/contributors page.
 
 ### Guidelines
 
@@ -242,7 +242,7 @@ Guest authors need a short bio (2-3 paragraphs) for the contact/contributors pag
 
 ### Example Bio
 
-Here's the site owner's bio as a reference:
+Here's an example bio from one of the site's contributors:
 
 > I'm Geoff Wright, living in Anchorage, Alaska. I grew up in Iowa, spent time in Nebraska and Maryland, and eventually settled in Alaska where I've been for [years].
 >
@@ -260,7 +260,7 @@ Here's the site owner's bio as a reference:
 
 ## Questions?
 
-If you have questions about contributing, reach out to the site owner. The goal is to make contributing as straightforward as possible while maintaining the site's quality and focus.
+If you have questions about contributing, reach out to the site editor. The goal is to make contributing as straightforward as possible while maintaining the site's quality and focus.
 
 Welcome to 907.life!
 
