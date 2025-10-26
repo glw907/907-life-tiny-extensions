@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This document provides actual excerpts from 907.life demonstrating the writing patterns described in WRITING-GUIDE.md. Use these examples to calibrate tone, structure, and style when creating or editing content.
+This document provides actual excerpts from 907.life demonstrating the writing patterns described in writing-guide.md. Use these examples to calibrate tone, structure, and style when creating or editing content.
 
 ---
 
@@ -276,4 +276,4 @@ When drafting or editing, compare your writing to these examples:
 
 **Version**: 1.0
 **Last Updated**: 2025-10-25
-**Refer to**: WRITING-GUIDE.md for detailed patterns, PHILOSOPHY.md for core principles
+**Refer to**: writing-guide.md for detailed patterns, philosophy.md for core principles

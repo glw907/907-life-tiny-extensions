@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This guide establishes technical standards for templates, CSS, and code organization. All code should align with the core principles in PHILOSOPHY.md: intentionality, accessibility, honesty, and focus.
+This guide establishes technical standards for templates, CSS, and code organization. All code should align with the core principles in philosophy.md: intentionality, accessibility, honesty, and focus.
 
 **Key emphasis**: High-quality commenting that reflects design philosophy and makes the codebase understandable for future work.
 
@@ -674,4 +674,4 @@ This only appears in full post view.
 
 **Version**: 1.0
 **Last Updated**: 2025-10-25
-**Refer to**: PHILOSOPHY.md for core principles, SITE-GUIDE.md for content architecture
+**Refer to**: philosophy.md for core principles, site-guide.md for content architecture

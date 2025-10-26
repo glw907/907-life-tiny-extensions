@@ -2,9 +2,9 @@
 
 ## Purpose
 
-This guide establishes standards for all written content on 907.life. All writing should align with the core principles in PHILOSOPHY.md: intentionality, accessibility, honesty, and focus.
+This guide establishes standards for all written content on 907.life. All writing should align with the core principles in philosophy.md: intentionality, accessibility, honesty, and focus.
 
-Refer to WRITING-EXAMPLES.md for concrete demonstrations of these patterns in action.
+Refer to writing-examples.md for concrete demonstrations of these patterns in action.
 
 ---
 
@@ -445,4 +445,4 @@ Before publishing, ask:
 
 **Version**: 1.0
 **Last Updated**: 2025-10-25
-**Refer to**: PHILOSOPHY.md for core principles, WRITING-EXAMPLES.md for demonstrations
+**Refer to**: philosophy.md for core principles, writing-examples.md for demonstrations

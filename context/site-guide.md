@@ -420,4 +420,4 @@ categories:
 
 **Version**: 1.0
 **Last Updated**: 2025-10-25
-**Refer to**: CODE-GUIDE.md for template implementation details
+**Refer to**: code-guide.md for template implementation details

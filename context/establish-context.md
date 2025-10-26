@@ -1,5 +1,29 @@
 # Documentation for Claude Assistance
 
+## Starting Prompt for Claude Code
+
+**When this file path is provided at the start of a session, follow these steps:**
+
+1. **Read all context documentation files** in this directory:
+   - `philosophy.md` - Core principles guiding all decisions
+   - `writing-guide.md` - Standards for written content
+   - `writing-examples.md` - Concrete demonstrations of writing style
+   - `site-guide.md` - Information architecture and content organization
+   - `code-guide.md` - Technical standards for templates and CSS
+
+2. **Understand the project**: This is a Micro.blog plugin for 907.life that extends the Tiny Hugo theme. All work must align with four core principles: intentionality, accessibility, honesty, and focus.
+
+3. **Internalize the context**: After reading all files, you should understand:
+   - The site's philosophy and how it connects writing, design, and code
+   - Writing voice, tone, and structural patterns
+   - Content organization and template patterns
+   - CSS organization and commenting standards
+   - When to apply which combination of context documents
+
+4. **Confirm readiness**: Briefly summarize your understanding of the project and indicate you're ready to assist with writing, coding, design, or architectural tasks.
+
+---
+
 ## Purpose
 
 This documentation repository provides context for AI assistance (primarily Claude Code) when working on the 907.life Micro.blog plugin. It enables Claude to provide maximally useful help with:
@@ -16,7 +40,7 @@ This documentation repository provides context for AI assistance (primarily Clau
 When assisting with tasks, reference the relevant documents to understand context and maintain consistency:
 
 ### For Writing Tasks
-**Load**: `PHILOSOPHY.md` + `WRITING-GUIDE.md` + `WRITING-EXAMPLES.md`
+**Load**: `philosophy.md` + `writing-guide.md` + `writing-examples.md`
 
 - Drafting new posts or pages
 - Editing existing content
@@ -25,7 +49,7 @@ When assisting with tasks, reference the relevant documents to understand contex
 - Ensuring voice and tone consistency
 
 ### For Design/CSS Tasks
-**Load**: `PHILOSOPHY.md` + `CODE-GUIDE.md`
+**Load**: `philosophy.md` + `code-guide.md`
 
 - Modifying custom.css
 - Adjusting typography or colors
@@ -34,7 +58,7 @@ When assisting with tasks, reference the relevant documents to understand contex
 - Understanding CSS organization
 
 ### For Site Architecture Tasks
-**Load**: `PHILOSOPHY.md` + `SITE-GUIDE.md` + `CODE-GUIDE.md`
+**Load**: `philosophy.md` + `site-guide.md` + `code-guide.md`
 
 - Adding new sections or categories
 - Modifying navigation
@@ -43,13 +67,13 @@ When assisting with tasks, reference the relevant documents to understand contex
 - Creating new templates
 
 ### For Any Task
-**Always consider**: `PHILOSOPHY.md`
+**Always consider**: `philosophy.md`
 
 The philosophy document provides the foundational principles that inform all decisions. When in doubt, choices should align with intentionality, accessibility, honesty, and focus.
 
 ## Document Overview
 
-### PHILOSOPHY.md
+### philosophy.md
 **What**: Core principles and values that guide all work on 907.life
 
 **Contains**:
@@ -60,7 +84,7 @@ The philosophy document provides the foundational principles that inform all dec
 
 **Use when**: Making any significant decision, understanding the "why" behind existing patterns, resolving ambiguity
 
-### WRITING-GUIDE.md
+### writing-guide.md
 **What**: Standards and patterns for all written content
 
 **Contains**:
@@ -72,7 +96,7 @@ The philosophy document provides the foundational principles that inform all dec
 
 **Use when**: Creating or editing any written content, maintaining voice consistency, structuring posts
 
-### SITE-GUIDE.md
+### site-guide.md
 **What**: Information architecture and content organization
 
 **Contains**:
@@ -84,7 +108,7 @@ The philosophy document provides the foundational principles that inform all dec
 
 **Use when**: Working with post categories, understanding content flow, adding new sections, modifying navigation
 
-### CODE-GUIDE.md
+### code-guide.md
 **What**: Technical standards for CSS, templates, and implementation
 
 **Contains**:
@@ -98,7 +122,7 @@ The philosophy document provides the foundational principles that inform all dec
 
 **Use when**: Writing or modifying CSS, creating templates, implementing design changes, maintaining code consistency
 
-### WRITING-EXAMPLES.md
+### writing-examples.md
 **What**: Concrete examples demonstrating writing style
 
 **Contains**:
@@ -112,9 +136,9 @@ The philosophy document provides the foundational principles that inform all dec
 ## Key Principles for Claude Assistance
 
 1. **Consistency First**: All suggestions should align with established patterns in these documents
-2. **Philosophy Grounded**: When unsure, defer to core principles in PHILOSOPHY.md
+2. **Philosophy Grounded**: When unsure, defer to core principles in philosophy.md
 3. **Context Aware**: Load relevant documents before making suggestions
-4. **Pattern Recognition**: Use WRITING-EXAMPLES.md to understand patterns, not just rules
+4. **Pattern Recognition**: Use writing-examples.md to understand patterns, not just rules
 5. **Purposeful Changes**: Every change should have a reason rooted in the philosophy
 6. **Question Ambiguity**: If a request conflicts with documented principles, ask for clarification
 7. **Maintain Voice**: Writing assistance should sound like the site author, not generic AI output
@@ -131,17 +155,17 @@ The philosophy document provides the foundational principles that inform all dec
 
 ```
 context/
-├── README.md                # This file - instructions for using context docs
-├── PHILOSOPHY.md           # Core principles and design philosophy
-├── WRITING-GUIDE.md        # Content creation standards
-├── WRITING-EXAMPLES.md     # Actual excerpts demonstrating style
-├── SITE-GUIDE.md          # Information architecture and navigation
-└── CODE-GUIDE.md          # Technical standards and commenting
+├── establish-context.md    # This file - starting prompt and context instructions
+├── philosophy.md           # Core principles and design philosophy
+├── writing-guide.md        # Content creation standards
+├── writing-examples.md     # Actual excerpts demonstrating style
+├── site-guide.md          # Information architecture and navigation
+└── code-guide.md          # Technical standards and commenting
 
 ../
 ├── README.md              # Plugin files and technical documentation
 ├── static/custom.css      # Full CSS implementation
-└── layouts/               # Template files referenced in CODE-GUIDE.md
+└── layouts/               # Template files referenced in code-guide.md
 ```
 
 ---
